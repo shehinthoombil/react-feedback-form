@@ -25,6 +25,9 @@ function Component() {
             <div>
             <Slider />
             </div>
+            <div className='w-[350px]'>
+                <input type="text" placeholder='Add your comments' />
+            </div>
         </div>
 
     )
