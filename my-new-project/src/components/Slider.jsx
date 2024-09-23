@@ -23,32 +23,31 @@ function Slider() {
 
     return (
         <div className='Slider'>
-            {/* <datalist id="tickmarks">
-                <option className='opacity-50' value="worst" label="😖"></option>
-                <option value="notgood" label="😧"></option>
-                <option value="fine" label="😐"></option>
-                <option value="lookgood" label="😀"></option>
-                <option value="verygood" label="😍"></option>
-            </datalist> */}
-            <div className='flex gap-5 text-4xl py-10'>
-                <div className={`${mood === "😖" ? "" : 'filter grayscale'}`}>
+            <div className='flex gap-5 text-sm py-10 font-bold text-textSecondary'>
+                <div className={`${mood === "😖" ? "" : 'filter grayscale'} text-center`}>
                     <img src="/public/images/Worst.svg" alt="" />
+                    <p>Worst</p>
                 </div>
-                <div className={`${mood === "😧" ? "" : 'filter grayscale'}`}>
-                    <img src="/public/images/Neutral.svg" alt="" />
-                </div>
-                <div className={`${mood === "😐" ? "" : 'filter grayscale'}`}>
-                    <img src="/public/images/Loveit.svg" alt="" />
-                </div>
-                <div className={`${mood === "😀" ? "" : 'filter grayscale'}`}>
+                <div className={`${mood === "😧" ? "" : 'filter grayscale'} text-center`}>
                     <img src="/public/images/Fine.svg" alt="" />
+                    <p>Not Good</p>
                 </div>
-                <div className={`${mood === "😍" ? "" : 'filter grayscale'}`}>
+                <div className={`${mood === "😐" ? "" : 'filter grayscale'} text-center`}>
+                    <img src="/public/images/Neutral.svg" alt="" />
+                    <p>Fine</p>
+                </div>
+                <div className={`${mood === "😀" ? "" : 'filter grayscale'} text-center`}>
                     <img src="/public/images/Good.svg" alt="" />
+                    <p>Look Good</p>
+                </div>
+                <div className={`${mood === "😍" ? "" : 'filter grayscale'} text-center`}>
+                    <img src="/public/images/Loveit.svg" alt="" />
+                    <p>Very Good</p>
                 </div>
             </div>
 
-            <input className='w-[350px]' type="range"
+            <input className='w-[350px] accent-textSecondary bg-white'
+                type="range"
                 list="tickmarks"
                 min="0"
                 max="100"
