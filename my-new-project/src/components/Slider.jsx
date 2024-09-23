@@ -23,13 +23,13 @@ function Slider() {
 
     return (
         <div className='Slider'>
-            <div className='flex gap-5 text-sm py-10 font-bold text-textSecondary'>
+            <div className='flex gap-5 text-sm py-5 font-bold text-textSecondary -mt-3'>
                 <div className={`${mood === "😖" ? "" : 'filter grayscale'} text-center`}>
                     <img src="/public/images/Worst.svg" alt="" />
                     <p>Worst</p>
                 </div>
                 <div className={`${mood === "😧" ? "" : 'filter grayscale'} text-center`}>
-                    <img src="/public/images/Fine.svg" alt="" />
+                    <img src="/public/images/Fine.svg" alt="" className="w-12 h-12" />
                     <p>Not Good</p>
                 </div>
                 <div className={`${mood === "😐" ? "" : 'filter grayscale'} text-center`}>
@@ -37,16 +37,16 @@ function Slider() {
                     <p>Fine</p>
                 </div>
                 <div className={`${mood === "😀" ? "" : 'filter grayscale'} text-center`}>
-                    <img src="/public/images/Good.svg" alt="" />
+                    <img src="/public/images/Good.svg" alt="" className="w-12 h-12" />
                     <p>Look Good</p>
                 </div>
                 <div className={`${mood === "😍" ? "" : 'filter grayscale'} text-center`}>
-                    <img src="/public/images/Loveit.svg" alt="" />
+                    <img src="/public/images/Loveit.svg" alt="" className="w-12 h-12" />
                     <p>Very Good</p>
                 </div>
             </div>
 
-            <input className='w-[350px] accent-textSecondary bg-white'
+            <input className='w-[350px] py-5 accent-textSecondary bg-white -mt-7'
                 type="range"
                 list="tickmarks"
                 min="0"
