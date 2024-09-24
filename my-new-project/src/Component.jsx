@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import InputField from './components/InputField';
 import Slider from './components/Slider';
 import UserComment from './components/UserComment';
-
+import './component.css'
 function Component() {
     const [name, setName] = useState('');
     const [contact, setContact] = useState('');
@@ -61,7 +61,9 @@ function Component() {
         if (validate()) {
             const newFeedback = { name, contact, email, comments, mood };
             const updatedFeedbacks = [...feedbacks, newFeedback];
+
             localStorage.setItem('feedbacks', JSON.stringify(updatedFeedbacks));
+            setFeedbacks(updatedFeedbacks);
 
             setName('');
             setContact('');
@@ -78,9 +80,8 @@ function Component() {
     return (
         <div className='flex lg:flex-row flex-col items-center justify-center bg-[#D5E4F1] min-h-screen w-screen'>
 
-            {/* Feedback Form */}
-            <div className='h-auto p-10 max-w-md mx-auto bg-primary rounded-lg shadow-md w-1/2'>
-                <h5 className="text-sm text-text mb-7">Please Provide your Feedback</h5>
+            <div className='h-auto p-10 max-w-md mx-auto bg-primary rounded-lg shadow-md w-1/2 ml-28'>
+                <h5 className="gap-2.5 self-stretch py-2.5 max-w-full text-sm font-medium text-sky-700 w-[360px]">Please Provide your Feedback</h5>
                 <div className='space-y-2'>
                     <div className='flex gap-5'>
                         <div>
@@ -107,7 +108,7 @@ function Component() {
                         rows="1"
                         value={comments}
                         onChange={(e) => setComments(e.target.value)}
-                        className='w-full resize-none p-2 border-none focus:outline-none text-sm'
+                        className='w-full resize-none p-2 border-none focus:outline-none text-sm '
                     ></textarea>
                 </div>
                 <p className="text-red-500 text-[12px] h-5">{errors.comments}</p>
@@ -118,14 +119,17 @@ function Component() {
                     SUBMIT
                 </button>
             </div>
+            <div className='flex flex-col w-full ml-7 overflow-x-hidden'>
+    <h2 className='text-sky-700 font-extrabold ml-6 mb-2 text-xl bg-[#D5E4F1] sticky top-0 z-10'>Submitted Feedbacks</h2>
+    <div className='flex flex-col gap-5 max-h-[66vh] overflow-x-hidden overflow-y-scroll w-1/2 p-5 hide-scrollbar'>
+        {feedbacks.map((feedback, index) => (
+            <UserComment key={index} feedback={feedback} />
+        ))}
+    </div>
+</div>
+        ``
+            
 
-            {/* Feedback List */}
-            <div className='flex flex-col gap-5 min-h-[66vh] overflow-x-hidden overflow-y-scroll w-1/2 p-5'>
-                <h2 className='text-text font-bold text-xl mb-1'>Submitted Feedbacks</h2>
-                {feedbacks.map((feedback, index) => (
-                    <UserComment key={index} feedback={feedback} />
-                ))}
-            </div>
         </div>
     );
 }

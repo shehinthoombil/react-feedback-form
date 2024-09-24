@@ -1,0 +1,57 @@
+/* WebKit browsers (Chrome, Safari) */
+.custom-slider::-webkit-slider-runnable-track {
+    background-color: #A5E0DD; /* Custom color for the track */
+    height: 5px;
+    border-radius: 5px;
+  }
+  
+  /* Thumb customization for WebKit */
+  .custom-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #20B2AA; /* Thumb color */
+    cursor: pointer;
+    margin-top: -8px; /* Adjust to center the thumb */
+  }
+  
+  /* Firefox */
+  .custom-slider::-moz-range-track {
+    background-color: #A5E0DD; /* Custom color for the track */
+    height: 5px;
+    border-radius: 5px;
+  }
+  
+  /* Thumb customization for Firefox */
+  .custom-slider::-moz-range-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #20B2AA;
+    cursor: pointer;
+  }
+  
+  /* Internet Explorer */
+  .custom-slider::-ms-track {
+    background-color: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  
+  .custom-slider::-ms-fill-lower {
+    background-color: #A5E0DD;
+  }
+  
+  .custom-slider::-ms-fill-upper {
+    background-color: #A5E0DD;
+  }
+  
+  .custom-slider::-ms-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #20B2AA;
+  }
+  

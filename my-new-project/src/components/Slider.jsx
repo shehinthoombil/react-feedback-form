@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import '../slider.css'
 
 function Slider({ mood, setMood }) {
     const [sliderValue, setSliderValue] = useState(0);
@@ -62,13 +63,16 @@ function Slider({ mood, setMood }) {
                 </div>
             </div>
 
-            <input className='w-[350px] py-5 accent-textSecondary bg-white -mt-7'
+            <input className='w-[350px] py-5 accent-textSecondary bg-white -mt-7 custom-slider'
                 type="range"
                 list="tickmarks"
                 min="0"
                 max="100"
                 value={sliderValue}
                 onChange={handleChange} />
+
+          
+
         </div>
     )
 }
