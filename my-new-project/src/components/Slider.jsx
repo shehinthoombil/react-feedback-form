@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function Slider() {
+function Slider({ onMoodChange }) {
     const [mood, setMood] = useState("😖")
     const [sliderValue, setSliderValue] = useState(0);
 
@@ -8,6 +8,8 @@ function Slider() {
     function handleChange(e) {
         const val = e.target.value;
         setSliderValue(val);
+
+        let selectedMood = ""
         if (val < 20) {
             setMood("😖")
         } else if (val >= 20 && val < 40) {
@@ -19,6 +21,9 @@ function Slider() {
         } else if (val > 80 && val < 100) {
             setMood("😍");
         }
+
+        setMood(selectedMood);
+        onMoodChange(selectedMood);
     }
 
     return (
@@ -53,7 +58,6 @@ function Slider() {
                 max="100"
                 value={sliderValue}
                 onChange={handleChange} />
-
         </div>
     )
 }
