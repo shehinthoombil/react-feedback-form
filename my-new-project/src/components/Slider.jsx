@@ -9,7 +9,6 @@ function Slider({ onMoodChange }) {
         const val = e.target.value;
         setSliderValue(val);
 
-        let selectedMood = ""
         if (val < 20) {
             setMood("😖")
         } else if (val >= 20 && val < 40) {
@@ -22,8 +21,8 @@ function Slider({ onMoodChange }) {
             setMood("😍");
         }
 
-        setMood(selectedMood);
-        onMoodChange(selectedMood);
+        setMood();
+        onMoodChange();
     }
 
     return (

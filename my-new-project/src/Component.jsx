@@ -75,6 +75,7 @@ function Component() {
 
     return (
         <div className='flex items-center justify-center bg-[#D5E4F1] min-h-screen w-full'>
+
             <div className='h-auto p-10 max-w-md mx-auto bg-primary rounded-lg shadow-md'>
                 <h5 className="text-sm text-text mb-7">Please Provide your Feedback</h5>
                 <div className='space-y-6'>
@@ -113,13 +114,14 @@ function Component() {
                     <button className='rounded-lg' onClick={handleSubmit}>SUBMIT</button>
                 </div>
             </div>
-            <div className='flex flex-col gap-3 max-h-[50vh] overflow-x-hidden overflow-y-scroll'>
-                <h2 className='text-text font-bold mb-4'>Submitted Feedbacks</h2>
+            <div className='flex flex-col gap-3 max-h-[66vh] w-1/2 overflow-x-hidden overflow-y-scroll -mt-53'>
+                <h2 className='text-text font-bold text-xl mb-1'>Submitted Feedbacks</h2>
                 {feedbacks.map((feedback, index) => (
                     <UserComment key={index} feedback={feedback} />
                 ))}
 
             </div>
+
         </div>
 
 

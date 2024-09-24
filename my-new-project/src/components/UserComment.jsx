@@ -2,7 +2,7 @@ import React from 'react'
 
 function UserComment({ feedback }) {
     return (
-        <div className='min-h-[100px] w-[410px] bg-white px-6 rounded-lg shadow-lg mr-80'>
+        <div className='min-h-[100px] w-[410px] bg-white px-6 rounded-lg shadow-lg mr-60'>
             {/* <p className='text-text font-bold'>Comments from the user</p> */}
             <p className='text-text font-bold'> {feedback.mood}</p>
             <p className='text-text font-bold'> {feedback.comments}</p>
