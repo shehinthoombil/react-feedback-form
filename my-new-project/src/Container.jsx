@@ -10,7 +10,7 @@ function Component() {
     const [comments, setComments] = useState('');
     const [feedbacks, setFeedbacks] = useState([]);
     const [mood, setMood] = useState({
-        image: '/public/images/Worst.svg',
+        image: '/images/Worst.svg',
         description: 'Worst'
     });
     const [errors, setErrors] = useState({
@@ -70,7 +70,7 @@ function Component() {
             setEmail('');
             setComments('');
             setMood({
-                image: "/public/images/Worst.svg",
+                image: "/images/Worst.svg",
                 description: "Worst"
             });
             setErrors({});
