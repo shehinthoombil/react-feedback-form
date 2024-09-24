@@ -1,5 +1,4 @@
 import React from 'react'
-import Component from '../component'
 
 function InputField({ placeholder, label, value, onChange }) {
   return (
