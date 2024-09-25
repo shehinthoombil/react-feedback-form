@@ -4,7 +4,7 @@ This is a **React** project to implement a feedback form based on a provided Fig
 
 ## Live Demo
 
-(#https://react-feedback-form-drab.vercel.app/)
+(https://react-feedback-form-drab.vercel.app/)
 
 ## Features
 
