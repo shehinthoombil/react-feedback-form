@@ -1,4 +1,4 @@
-# Feedback Form Assignment
+# Feedback Form
 
 This is a **React** project to implement a feedback form based on a provided Figma design. The form allows users to input their name, contact number, email, and feedback using an emoji-based slider and comment section. Submitted feedback is displayed dynamically without page refresh using local state.
 
