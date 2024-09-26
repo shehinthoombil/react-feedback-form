@@ -39,40 +39,37 @@ function Slider({ mood, setMood }) {
     }
 
     return (
-        <div className='Slider'>
-            <div className='flex gap-5 text-sm py-5 font-bold text-textSecondary -mt-3'>
-                <div className={`${mood.image === "/images/Worst.svg" ? "" : 'filter grayscale'} text-center`}>
-                    <img src="/images/Worst.svg" alt="Worst" />
+        <div className='Slider w-full'>
+            <div className='flex justify-between items-center text-sm py-5 font-bold text-textSecondary'>
+                <div className={`${mood.image === "/images/Worst.svg" ? "" : 'filter grayscale'} flex flex-col items-center`}>
+                    <img src="/images/Worst.svg" alt="Worst" className="w-12 h-12" />
                     <p>Worst</p>
                 </div>
-                <div className={`${mood.image === "/images/Fine.svg" ? "" : 'filter grayscale'} text-center`}>
+                <div className={`${mood.image === "/images/Fine.svg" ? "" : 'filter grayscale'} flex flex-col items-center`}>
                     <img src="/images/Fine.svg" alt="Not Good" className="w-12 h-12" />
                     <p>Not Good</p>
                 </div>
-                <div className={`${mood.image === "/images/Neutral.svg" ? "" : 'filter grayscale'} text-center`}>
-                    <img src="/images/Neutral.svg" alt="Fine" />
+                <div className={`${mood.image === "/images/Neutral.svg" ? "" : 'filter grayscale'} flex flex-col items-center`}>
+                    <img src="/images/Neutral.svg" alt="Fine" className="w-12 h-12" />
                     <p>Fine</p>
                 </div>
-                <div className={`${mood.image === "/images/Good.svg" ? "" : 'filter grayscale'} text-center`}>
+                <div className={`${mood.image === "/images/Good.svg" ? "" : 'filter grayscale'} flex flex-col items-center`}>
                     <img src="/images/Good.svg" alt="Look Good" className="w-12 h-12" />
                     <p>Look Good</p>
                 </div>
-                <div className={`${mood.image === "/images/Loveit.svg" ? "" : 'filter grayscale'} text-center`}>
+                <div className={`${mood.image === "/images/Loveit.svg" ? "" : 'filter grayscale'} flex flex-col items-center`}>
                     <img src="/images/Loveit.svg" alt="Very Good" className="w-12 h-12" />
                     <p>Very Good</p>
                 </div>
             </div>
 
-            <input className='w-[350px] py-5 accent-textSecondary bg-white -mt-7 custom-slider'
+            <input className='w-full py-5 accent-textSecondary bg-white mt-4 custom-slider mx-auto'
                 type="range"
                 list="tickmarks"
                 min="0"
                 max="100"
                 value={sliderValue}
                 onChange={handleChange} />
-
-          
-
         </div>
     )
 }

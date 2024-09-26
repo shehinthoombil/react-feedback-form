@@ -80,10 +80,10 @@ function Component() {
     return (
         <div className='flex lg:flex-row flex-col items-center justify-center bg-[#D5E4F1] min-h-screen w-screen'>
 
-            <div className='h-auto p-10 max-w-md mx-auto bg-primary rounded-lg shadow-md w-1/2 ml-28'>
+            <div className='p-6 bg-primary rounded-lg shadow-md w-full lg:w-1/2 max-w-lg lg:max-w-md'>
                 <h5 className="gap-2.5 self-stretch py-2.5 max-w-full text-sm font-medium text-sky-700 w-[360px]">Please Provide your Feedback</h5>
                 <div className='space-y-2'>
-                    <div className='flex gap-5'>
+                    <div className='flex flex-col lg:flex-row gap-5'>
                         <div>
                             <InputField placeholder='Enter your name' label='Name' value={name} onChange={(e) => setName(e.target.value)} />
                             <p className="text-red-500 text-[12px] h-5">{errors.name}</p>
@@ -93,7 +93,7 @@ function Component() {
                             <p className="text-red-500 text-[12px] h-5">{errors.contact}</p>
                         </div>
                     </div>
-                    <div className='w-1/2 pr-3'>
+                    <div className='w-full md:w-1/2 pr-3'>
                         <InputField placeholder='xyz123@gmail.com' label='Email Address' value={email} onChange={(e) => setEmail(e.target.value)} />
                         <p className="text-red-500 text-[12px] h-5">{errors.email}</p>
                     </div>
@@ -102,7 +102,7 @@ function Component() {
                 <div>
                     <Slider mood={mood} setMood={setMood} />
                 </div>
-                <div className='w-full p-5 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 mt-2'>
+                <div className='w-full p-5 border rounded-lg mt-2'>
                     <textarea
                         placeholder='Add your comments'
                         rows="1"
@@ -119,16 +119,16 @@ function Component() {
                     SUBMIT
                 </button>
             </div>
-            <div className='flex flex-col w-full ml-7 overflow-x-hidden'>
-    <h2 className='text-sky-700 font-extrabold ml-6 mb-2 text-xl bg-[#D5E4F1] sticky top-0 z-10'>Submitted Feedbacks</h2>
-    <div className='flex flex-col gap-5 max-h-[66vh] overflow-x-hidden overflow-y-scroll w-1/2 p-5 hide-scrollbar'>
-        {feedbacks.map((feedback, index) => (
-            <UserComment key={index} feedback={feedback} />
-        ))}
-    </div>
-</div>
-        ``
+            <div className='flex flex-col w-full ml-7 mt-5 lg:mt-0 lg:w-1/2 overflow-hidden'>
+                <h2 className='text-sky-700 font-extrabold ml-6 mb-2 text-xl bg-[#D5E4F1] sticky top-0 z-10'>Submitted Feedbacks</h2>
+                <div className='flex flex-col gap-5 max-h-[66vh] overflow-y-auto p-5 scrollbar-hide'>
+                    {feedbacks.map((feedback, index) => (
+                        <UserComment key={index} feedback={feedback} />
+                    ))}
+                </div>
+            </div>
             
+
 
         </div>
     );

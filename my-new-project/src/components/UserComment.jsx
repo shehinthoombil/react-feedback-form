@@ -2,7 +2,7 @@ import React from 'react'
 
 function UserComment({ feedback }) {
     return (
-        <div className='flex justify-between items-center  min-h-[100px] w-[410px] bg-white px-6 rounded-lg shadow-lg mr-60'>
+        <div className='flex justify-between items-center min-h-[100px] w-full lg:w-[410px] bg-white px-6 rounded-lg shadow-lg'>
             <div>
                 <p className='text-text font-bold mt-6'> {feedback.comments}</p>
                 <h2 className='text-sm text-text  mt-1'>{feedback.name}</h2>
